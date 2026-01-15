@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ezykel AutoParts Trading</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+</head>
+<body>
+
+<!-- Header -->
+  <header class="header">
+  <a href="#home" class="logo">
+  <img src="images/ezykel_logorm.png" alt="EZYKEL Logo" class="logo-img">
+  <div class="logo-text">EZY<span>KEL</span></div>
+</div>
+
+  <button class="menu-btn" id="menuBtn">☰</button>
+  <nav class="nav" id="nav">
+    <a href="#home"><i class="fa-solid fa-house"></i> Home</a>
+    <a href="#products"><i class="fa-solid fa-car"></i> Products</a>
+    <a href="#about"><i class="fa-solid fa-circle-info"></i> About</a>
+    <a href="#contact"><i class="fa-solid fa-address-book"></i> Contact</a>
+    <a href="#cart" class="cart-link"><i class="fa-solid fa-cart-shopping"></i>
+       Cart (<span id="cartCount">0</span>)
+</a>
+  </nav>
+
+</header>
+
+<!-- Banner -->
+<section class="banner" id="home">
+  <div class="banner-slider">
+    <img src="images/ezykel-banner_1.png" class="slide active" alt="Auto Parts">
+    <img src="images/ezykel_banner_2.png" class="slide" alt="Auto Parts">
+    <img src="images/ezykel_banner_3.png" class="slide" alt="Auto Parts">
+  </div>
+
+  <div class="banner-content">
+    <h1>Ezykel Auto Parts Trading</h1>
+    <p>Reliable parts, Trusted Partnership</p>
+    <a href="#products" class="btn">See Products</a>
+  </div>
+</section>
+
+<!-- Products -->
+<section class="products" id="products">
+  <h2>Products on Sale</h2>
+
+  <input type="text"id="searchInput"placeholder="Search products..."class="product-search">
+
+  <div class="cards">
+
+    <div class="card product-card">
+      <img src="images/brake_shoe_assembly.png" alt="Brake Shoe Assembly">
+      <h3>Brake Shoe Assembly</h3>
+      <p class="price">₱3,400</p>
+      <p class="stock">Stock: <span class="stock-count">10</span></p>
+      <button class="add-cart">Add to Cart</button>
+    </div>
+
+    <div class="card product-card">
+      <img src="images/brake_lining.png" alt="Brake Lining">
+      <h3>Brake Lining</h3>
+      <p class="price">₱180</p>
+      <p class="stock">Stock: <span class="stock-count">20</span></p>
+      <button class="add-cart">Add to Cart</button>
+    </div>
+
+    <div class="card product-card">
+      <img src="images/balance_beam.png" alt="Balance Beam">
+      <h3>Balance Beam</h3>
+      <p class="price">₱3,600</p>
+      <p class="stock">Stock: <span class="stock-count">5</span></p>
+      <button class="add-cart">Add to Cart</button>
+    </div>
+
+    <div class="card product-card">
+      <img src="images/trailer_hose.png" alt="Trailer Hose">
+      <h3>Trailer Hose</h3>
+      <p class="price">₱1,400</p>
+      <p class="stock">Stock: <span class="stock-count">8</span></p>
+      <button class="add-cart">Add to Cart</button>
+    </div>
+
+    <div class="card product-card">
+  <img src="images/axle_assembly.png" alt="Axle Assembly">
+  <h3>Axle Assembly</h3>
+  <p class="price">₱83,000</p>
+  <p class="stock">Stock: <span class="stock-count">1</span></p>
+  <button class="add-cart">Add to Cart</button>
+</div>
+
+<div class="card product-card">
+  <img src="images/trailer_controlwave.png" alt="Trailer Control Wave">
+  <h3>Trailer Control Wave</h3>
+  <p class="price">₱4,000</p>
+  <p class="stock">Stock: <span class="stock-count">30</span></p>
+  <button class="add-cart">Add to Cart</button>
+</div>
+
+<div class="card product-card">
+  <img src="images/trailer_valve.png" alt="Trailer Valve">
+  <h3>Trailver Valve</h3>
+  <p class="price">₱3,200</p>
+  <p class="stock">Stock: <span class="stock-count">6</span></p>
+  <button class="add-cart">Add to Cart</button>
+</div>
+
+<div class="card product-card">
+  <img src="images/landing_gear.png" alt="Landing Gear">
+  <h3>Landing Gear</h3>
+  <p class="price">₱32,000</p>
+  <p class="stock">Stock: <span class="stock-count">2</span></p>
+  <button class="add-cart">Add to Cart</button>
+</div>
+
+  </div>
+</section>
+
+<!-- Cart -->
+<section class="cart" id="cart">
+  <h2>Your Cart</h2>
+
+  <div class="cart-box">
+    <table class="cart-table">
+      <thead>
+        <tr>
+          <th>Product</th>
+          <th>Price</th>
+          <th>Qty</th>
+          <th>Total</th>
+          <th></th>
+        </tr>
+      </thead>
+      <tbody id="cartItems">
+        <!-- items added by JS -->
+      </tbody>
+    </table>
+
+    <div class="cart-summary">
+      <p>Total Amount: ₱<span id="cartTotal">0</span></p>
+      <button class="checkout-btn">Checkout</button>
+    </div>
+  </div>
+</section>
+
+<!-- About -->
+  <section class="about" id="about">
+    <h2>About Us</h2>
+
+    <p>
+      Ezykel AutoParts Trading delivers high-quality auto parts and accessories at competitive 
+      prices. Trusted partner for durable, reliable, and cost-efficient vehicle solutions.
+    </p>
+
+    <p>
+      We specialize in engine parts, brake systems, suspension components, electrical
+      parts, and other essential automotive products at competitive prices.
+    </p>
+
+    <p>
+      Our goal is to help customers maintain vehicle performance and safety by offering
+      durable products, honest pricing, and dependable service.
+    </p>
+
+    <div class="about-features">
+      <div>✔ Quality Auto Parts</div>
+      <div>✔ Affordable Prices</div>
+      <div>✔ Reliable Supply</div>
+      <div>✔ Customer-Focused Service</div>
+    </div>
+  </section>
+
+<!-- Contact -->
+  <section class="contact" id="contact">
+  <h2>Contact Us</h2>
+  <div class="contact-items">
+    <a href="https://www.facebook.com/profile.php?id=61580945424995" target="_blank" class="contact-link">
+      <i class="fa-brands fa-square-facebook"></i>
+      <span>Ezykel Autoparts Trading</span>
+    </a>
+    <a href="mailto:ezykelautopartstrading2021@gmail.com" target="_blank" class="contact-link">
+      <i class="fa-solid fa-envelope"></i>
+      <span>ezykelautopartstrading2021@gmail.com</span>
+    </a>
+    <a href="tel:09054907245" class="contact-link">
+      <i class="fa-solid fa-square-phone"></i>
+      <span>09054907245</span>
+    </a>
+  </div>
+</section>
+
+  <footer class="footer">
+    <p>Brilliant View Phase 1 Bagumbong, Caloocan City, Manila, Philippines</p>
+
+    <p>© 2026 AutoParts Trading. All rights reserved.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
